@@ -8,26 +8,33 @@
     <!-- ページのタイトル -->
     <title>桜吹雪</title>
 
-    <!-- ビューポート(視点)の指定 -->
+    <!-- ビューポート(視点)の指定をすると、
+    iPhone でも きれいに見せることができる -->
     <meta name="viewport" content="width=device-width">
 
-    <!-- ファビコンとアップルタッチアイコンの指定 -->
-    <!-- https://ao-system.net/favicongenerator/ -->
+    <!-- ファビコンとアップルタッチアイコンの指定をする -->
+    <!-- https://ao-system.net/favicongenerator/ で作成できる-->
     <link rel="icon" href="images/favicon.ico" type="image/ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon-180x180.png" type="image/png" sizes="180x180">
+    <link rel="apple-touch-icon"
+          href="images/apple-touch-icon-180x180.png"
+          type="image/png"
+          sizes="180x180">
 
-    <!-- 検索時に表示される、ウェブサイトの要約文 約80文字-->
-    <meta name="description" content="桜吹雪では、日本人の心、桜に因んだ名句をご紹介いたします。">
+    <!-- 検索時に表示されるウェブサイトの要約文(約80文字)を書く -->
+    <meta name="description"
+          content="日本人の心、桜に因んだ俳句をご紹介いたします。">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts 書道家・片岡祐二の手書き文字書体を使う -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap" >
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- アイコンフォントで有名な Font Awesome を使う -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-    <!-- 自分で作ったスタイルシート -->
+    <!-- 自分で作ったスタイルシートを読み込む -->
     <link rel="stylesheet" href="stylesheets/master.css">
   </head>
 
@@ -41,22 +48,30 @@
     <!-- ナビゲーションメニュー -->
     <nav>
       <ul>
-        <!-- fa-lgは1.33倍、la-2xは2倍の大きさ、fa-fwは横に少し間隔が空く -->
-        <!-- 2021年最新版、Font Awesome アイコンの使い方と便利な機能のまとめ -->
+        <!-- Font Awesome アイコンの使い方と便利な機能のまとめ -->
         <!-- https://coliss.com/articles/build-websites/operation/work/font-awesome-guide-and-useful-tricks.html -->
-        <li><a href="index.html"><i class="fa-solid fa-house fa-lg fa-fw"></i>トップ</a></li>
+        <!-- fa-lgは1.33倍、la-2xは2倍の大きさ、fa-fwは横に少し間隔が空く -->
+        <!-- それぞれのメニューの前に、アイコンフォントを入れて彩る -->
+        <li>
+          <a href="index.html">
+            <i class="fa-solid fa-house fa-lg fa-fw"></i>
+            トップ
+          </a>
+        </li>
+        <!-- 改行せずに一行に続けて書いても、同じように表示される -->
         <li><a href="#"><i class="fa-brands fa-pagelines fa-lg fa-fw"></i>サイトについて</a></li>
         <li><a href="#"><i class="fa-solid fa-envelope fa-lg fa-fw"></i>お問い合わせ</a></li>
       </ul>
     </nav>
 
-    <!-- ヒーローイメージ -->
+    <!-- ヒーローイメージ（サイトを印象づける大きな画像） -->
     <figure class="hero">
-      <!-- 写真の出典は ぱくたそ https://www.pakutaso.com/ より-->
+      <!-- 写真の出典は ぱくたそ https://www.pakutaso.com/ より -->
       <img src="images/sakura.jpg" alt="青空と咲き誇る小彼岸桜">
     </figure>
 
-    <!-- タイトル(キャッチフレーズ) -->
+    <!-- キャッチフレーズ（ここでは 俳聖 松尾芭蕉の名句を紹介）-->
+    <!-- h1 は 大見出し -->
     <h1>
       <span class="lefted text">扇にて</span>
       <span class="centered text">酒くむかげや</span>
@@ -70,7 +85,9 @@
 
     <!-- 装飾画像とソースコードへのリンクボタン -->
     <p>
+      <!-- 装飾画像 -->
       <img src="images/circle.svg" alt=""><br>
+      <!-- ソースコードへのリンクボタン -->
       <a href="https://github.com/Atelier-Mirai/sakura-fubuki"
          class="simple button">
         <span>ソースコードはこちら</span>
@@ -79,15 +96,21 @@
 
     <!-- 俳句の紹介 -->
     <section>
+      <!-- h2 は 中見出し -->
       <h2>さくらを詠んだ俳句</h2>
 
+      <!-- それぞれの俳句の紹介 -->
       <article>
+        <!-- ウィキペディアへのリンク -->
         <a href="https://ja.wikipedia.org/wiki/小林一茶">
+          <!-- 桜の写真を載せる -->
           <figure class="rotate-3 frame">
             <img src="images/ipponzakura.jpg" alt="">
           </figure>
+          <!-- h3 は小見出し -->
           <h3>穀つぶし 櫻の下に くらしけり</h3>
-          <p class="righted small text">小林一茶</p>
+          <!-- 詠んだ人の名前 -->
+          <p class="righted text">小林一茶</p>
         </a>
       </article>
 
@@ -97,7 +120,7 @@
             <img src="images/aozora_to_sakura.jpg" alt="">
           </figure>
           <h3>影は滝 空は花なり 糸桜</h3>
-          <p class="righted small text">加賀千代女</p>
+          <p class="righted text">加賀千代女</p>
         </a>
       </article>
 
@@ -107,7 +130,7 @@
             <img src="images/yamazakura.jpg" alt="">
           </figure>
           <h3>徐ろに 眼を移しつつ 初桜</h3>
-          <p class="righted small text">高浜虚子</p>
+          <p class="righted text">高浜虚子</p>
         </a>
       </article>
 
@@ -117,7 +140,7 @@
             <img src="images/sakura_tabidachi.jpg" alt="">
           </figure>
           <h3>観音の 大悲の桜 咲きにけり</h3>
-          <p class="righted small text">正岡子規</p>
+          <p class="righted text">正岡子規</p>
         </a>
       </article>
 
@@ -127,7 +150,7 @@
             <img src="images/mizuho_sakura.jpg" alt="">
           </figure>
           <h3>さくら木に さくら一杯に つきにけり</h3>
-          <p class="righted small text">室生犀星</p>
+          <p class="righted text">室生犀星</p>
         </a>
       </article>
 
@@ -137,15 +160,15 @@
             <img src="images/sakura_mejiro.jpg" alt="">
           </figure>
           <h3>町内の 鶯来たり 朝櫻</h3>
-          <p class="righted small text">泉鏡花</p>
+          <p class="righted text">泉鏡花</p>
         </a>
       </article>
     </section>
 
-    <!-- フッター -->
+    <!-- フッター（著作権や連絡先など） -->
     <footer>
       <div>
-        <p>&copy; さくら</p>
+        <p>© さくら</p>
       </div>
     </footer>
 
