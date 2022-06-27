@@ -1,0 +1,99 @@
+/*=============================================================================
+  ボタンの為の装飾指定
+
+  参考: CSSボタンデザイン120個以上！どこよりも詳しく作り方を解説！
+        https://jajaaan.co.jp/css/button/
+=============================================================================*/
+
+/* ボタンの基本形
+-----------------------------------------------------------------------------*/
+.button {
+  /* 横幅と高さを指定して表示できるようにする */
+  display: inline-block;
+
+  /* 書体に関する指定 */
+  font-size: clamp(16px, 4vw, 24px); /* 大きさを 16px 〜 24pxまで可変にする */
+  letter-spacing: 0.1em;             /* 文字と文字の間を少し空ける */
+  text-decoration: none;             /* 下線などの装飾が付かないようにする */
+
+  /* 文字の配置に関する指定 */
+  text-align: center;                /* 文字は中央に揃える */
+  vertical-align: middle;            /* 縦方向も中央に揃える */
+
+  /* ボタンの形に関する指定 */
+  border-radius: 0.5rem;             /* 角を少し丸くする */
+  padding: 0.8rem 1.2rem;            /* 内側に少し詰め物をして間隔を空ける */
+
+  /* アニメーションに関する指定 */
+  transition: all 0.3s;              /* 少し時間をあけて変化するようにする */
+}
+
+/* 簡素なボタン
+-----------------------------------------------------------------------------*/
+.simple.button {
+  color: var(--botaniro);             /* 文字の色は牡丹色 */
+  border: double 3px var(--botaniro); /* 二重の牡丹色の枠線 */
+  background: var(--sakurairo);       /* 背景色は桜色 */
+}
+
+.simple.button:hover {                /* マウスを重ねたときの指定 */
+  background: var(--nanohanairo);     /* 背景色は菜の花色 */
+}
+
+
+/* グラデーションボタン
+-----------------------------------------------------------------------------*/
+.gradient.button {
+  /* 背景色を桜色のグラデーションにする */
+  background-image: linear-gradient(-20deg, #e9defa 0%, #f7cbea 100%);
+}
+
+/* マウスを重ねたときの指定 */
+.gradient.button:hover {
+  box-shadow: 0 5px 15px #bc33f5; /* ボタンに紫色の影を付ける */
+}
+
+/* 文字の色の指定 */
+.gradient.button span {
+  background: linear-gradient(   /* 虹色にする */
+    -225deg,
+    #e60012 14%,
+    #f39800 28%,
+    #fff100 42%,
+    #009944 56%,
+    #0068B7 70%,
+    #1d2088 84%,
+    #cfa7cd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 金塊のようなボタン
+-----------------------------------------------------------------------------*/
+a.gold.button {
+  color: #b1921b; /* 文字の色 */
+  text-shadow: -1px -1px 1px #ffffd9; /* 文字に影を付ける */
+
+  /* 枠線の太さと色を、上右下左の時計回りの順に指定する */
+  border-top:    none;
+  border-right:   4px solid #cea82c;
+  border-bottom: 10px solid #987c1e;
+  border-left:    4px solid #ffed8b;
+
+  border-radius: 0; /* 金塊なので角は丸めない */
+  background: linear-gradient(-45deg, /* 金塊のようなグラデーション */
+    #ffd75b 0%,
+    #fff5a0 30%,
+    #fffabe 40%,
+    #ffffdb 50%,
+    #fff5a0 70%,
+    #fdd456 100%);
+}
+
+/* マウスを重ねたときの指定 */
+a.gold.button:hover {
+  /* 上に 3px 空白を入れて、下の枠線を 3px 減らすことで、
+     押してへこんだように見せる */
+  margin-top: 3px;
+  border-bottom: 7px solid #987c1e;
+}

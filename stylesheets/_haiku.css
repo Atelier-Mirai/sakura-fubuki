@@ -1,0 +1,42 @@
+/*=============================================================================
+  記事一覧
+  モバイル版・デスクトップ版 共通の設定
+=============================================================================*/
+section {
+  grid-row: haiku;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 10px;
+}
+
+section a {
+  color: var(--kurohairo);
+  text-decoration: none;
+}
+
+section a:hover {
+  text-decoration: underline;
+}
+
+section h2 {
+  grid-column: 1 / -1;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  color: var(--kurohairo);
+}
+
+section h3 {
+  font-size: 15px;
+}
+
+/*=============================================================================
+  デスクトップ版の設定
+=============================================================================*/
+@media (min-width: 768px) {
+  section {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 20px;
+  }
+}

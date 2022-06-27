@@ -1,0 +1,45 @@
+/*=============================================================================
+  写真の枠とその効果
+=============================================================================*/
+.frame {
+  border: 8px solid #fff;
+  /* 二つの影を付けることもできる */
+  box-shadow: 0 0 0 1px #ccc,
+              1px 3px 8px 0 #25252555;
+  margin-bottom: 0.5em;
+}
+
+.sepia.frame img {
+  /* セピア色にする */
+  filter: sepia(90%);
+}
+
+.monochrome.frame img {
+  /* 白黒にする */
+  filter: grayscale(90%);
+}
+
+.blur.frame img {
+  /* ぼかす */
+  filter: blur(3px);
+}
+
+.invert.frame img {
+  /* 反転させる */
+  filter: invert(75%);
+}
+
+.opacity.frame img {
+  /* 少し透明に */
+  filter: opacity(67%);
+}
+
+.rotate3 {
+  /* 右下に少し回転 */
+  transform: rotate(3deg)
+}
+
+.rotate-3 {
+  /* 右上に少し回転 */
+  transform: rotate(-3deg)
+}

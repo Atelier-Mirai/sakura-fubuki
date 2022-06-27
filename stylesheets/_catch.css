@@ -1,0 +1,57 @@
+/*=============================================================================
+  タイトル
+  モバイル版・デスクトップ版 共通の配置・装飾指定
+=============================================================================*/
+
+/* キャッチフレーズ
+-----------------------------------------------------------------------------*/
+h1 {
+  grid-row: catch;
+  justify-self: center;
+  align-self: center;
+  color: var(--sakurairo);
+  font-size: 48px;
+  font-weight: normal;
+  line-height: 1.2;
+  text-shadow: 2px 2px 5px var(--kurohairo), -2px -2px 5px var(--nibiiro);
+  /* text-align: center; */
+
+  font-family: 'Yuji Boku', serif;
+}
+
+h1 a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 32px;
+  margin-top: 1em;
+}
+
+h1 a:hover {
+  text-decoration: underline;
+}
+
+/* 装飾画像とソースコードへのリンクボタン
+-----------------------------------------------------------------------------*/
+p {
+  grid-row: code;
+  text-align: center;
+}
+
+p img {
+  width: 250px;
+  margin: 0 auto;
+}
+
+/*=============================================================================
+  デスクトップ版の配置・装飾指定
+=============================================================================*/
+@media (min-width: 768px) {
+  h1 {
+    grid-column: 2 / span 3;
+  }
+
+  p {
+    grid-column: 5 / span 3;
+    align-self: center;
+  }
+}
