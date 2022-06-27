@@ -2,16 +2,18 @@
   ヘッダー
   モバイル版・デスクトップ版 共通の配置・装飾指定
 =====================================================================*/
+/* header 要素に対する指定を行う */
 header  {
-  grid-row: header;
-  justify-self: center;
-  align-self: center;
+  grid-row: header;     /* catch 行の下に配置します */
+  justify-self: center; /* 水平方向に中央揃えします */
+  align-self: center;   /* 垂直方向に中央揃えします */
 
   /* 画面幅に応じて可変するフォントサイズ */
   font-size: clamp(48px, 12vw, 54px);
 
-  /* グラデーション */
-  /* CSSでテキストを彩る装飾サンプル集 https://1-notes.com/css-text-design/ */
+  /* 文字の色を虹色にします */
+  /* CSSでテキストを彩る装飾サンプル集  */
+  /* https://1-notes.com/css-text-design/ */
   color: transparent;
   background: repeating-linear-gradient(45deg,
     #e60012 0.1em 0.2em,
@@ -23,13 +25,15 @@ header  {
     #cfa7cd 0.8em 0.9em);
   -webkit-background-clip: text;
   background-clip: text;
-  font-weight: bold;
-  letter-spacing: 10px;
+
+  font-weight: bold;    /* 文字の太さを、太字にします */
+  letter-spacing: 10px; /* 少し広めに文字の間隔を空けます */
 }
 
+/* header 要素内の a 要素に対する指定を行う */
 header a {
-  color: inherit;
-  text-decoration: none;
+  color: inherit;        /* 文字の色は、h1 の色を継承します */
+  text-decoration: none; /* 文字の装飾はなし(下線を付けない) */
 }
 
 /*=====================================================================
@@ -37,6 +41,6 @@ header a {
 =====================================================================*/
 @media (min-width: 768px) {
   header {
-    justify-self: start;
+    justify-self: start; /* 水平方向に始まりから(左寄せで)配置します */
   }
 }

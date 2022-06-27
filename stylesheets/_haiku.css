@@ -2,32 +2,37 @@
   記事一覧
   モバイル版・デスクトップ版 共通の配置・装飾指定
 =====================================================================*/
+/* section 要素に対する指定を行う */
 section {
-  grid-row: haiku;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px 10px;
+  grid-row: haiku;  /* haiku 行の下に配置します */
+  display: grid;    /* grid 枠線 を使って配置するモードにします */
+  grid-template-columns: 1fr 1fr; /* 二列、創ります */
+  gap: 20px 10px;                 /* 行間を20px 列間を10px 取ります */
 }
 
+/* section 要素内の a 要素に対する指定を行う */
 section a {
-  color: var(--kurohairo);
-  text-decoration: none;
+  color: var(--kurohairo); /* 文字の色は黒羽色にします */
+  text-decoration: none;   /* 文字の装飾はなし(下線を付けない) */
 }
 
+/* section 要素内の a要素にマウスを重ねたときの指定を行う */
 section a:hover {
+  /* 文字の装飾として、下線を付けます */
   text-decoration: underline;
 }
 
+/* section 要素内の h2 要素に対する指定を行う */
 section h2 {
-  grid-column: 1 / -1;
-  font-size: 24px;
-  font-weight: normal;
-  text-align: center;
-  color: var(--kurohairo);
+  grid-column: 1 / -1;     /* (見出しなので)二列ぶち抜きで配置します */
+  font-size: 24px;         /* 文字の大きさを指定します */
+  font-weight: normal;     /* 文字の太さは、普通にします */
+  text-align: center;      /* 文字揃えは中央にします */
+  color: var(--kurohairo); /* 文字の色は黒羽色にします */
 }
 
 section h3 {
-  font-size: 18px;
+  font-size: 18px;         /* 文字の大きさを指定します */
 }
 
 /*=====================================================================
@@ -35,8 +40,9 @@ section h3 {
 =====================================================================*/
 @media (min-width: 768px) {
   section {
+    /* 3列 x 2行 で配置するようにします */
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
-    column-gap: 20px;
+    column-gap: 20px; /* 列間を20pxにします */
   }
 }

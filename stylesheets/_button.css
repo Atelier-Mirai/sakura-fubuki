@@ -12,20 +12,21 @@
   display: inline-block;
 
   /* 書体に関する指定 */
-  font-size: clamp(16px, 4vw, 24px); /* 大きさを 16px 〜 24pxまで可変にする */
-  letter-spacing: 0.1em;             /* 文字と文字の間を少し空ける */
-  text-decoration: none;             /* 下線などの装飾が付かないようにする */
+  /* 大きさを 16px 〜 24pxまで可変にする */
+  font-size: clamp(16px, 4vw, 24px);
+  letter-spacing: 0.1em; /* 文字と文字の間を少し空ける */
+  text-decoration: none; /* 下線などの装飾が付かないようにする */
 
   /* 文字の配置に関する指定 */
-  text-align: center;                /* 文字は中央に揃える */
-  vertical-align: middle;            /* 縦方向も中央に揃える */
+  text-align: center;     /* 文字は中央に揃える */
+  vertical-align: middle; /* 縦方向も中央に揃える */
 
   /* ボタンの形に関する指定 */
-  border-radius: 0.5rem;             /* 角を少し丸くする */
-  padding: 0.8rem 1.2rem;            /* 内側に少し詰め物をして間隔を空ける */
+  border-radius: 0.5rem;  /* 角を少し丸くする */
+  padding: 0.8rem 1.2rem; /* 内側に少し詰め物をして間隔を空ける */
 
   /* アニメーションに関する指定 */
-  transition: all 0.3s;              /* 少し時間をあけて変化するようにする */
+  transition: all 0.3s;   /* 少し時間をあけて変化するようにする */
 }
 
 /* 簡素なボタン

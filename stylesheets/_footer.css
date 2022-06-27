@@ -2,22 +2,23 @@
   フッター
   モバイル版・デスクトップ版 共通の配置・装飾指定
 =====================================================================*/
+/* footer 要素に対する指定を行う */
 footer {
-  grid-row: footer;
-  grid-column: 1 / -1;
-  justify-self: center;
-  align-self: center;
-  font-size: 13px;
+  grid-row: footer;     /* footer 行の下に配置します */
+  grid-column: 1 / -1;  /* 左右の余白も使って配置します */
+  justify-self: center; /* 水平方向に中央揃えします */
+  align-self: center;   /* 垂直方向に中央揃えします */
+  font-size: 13px;      /* 文字の大きさを指定します */
 
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 100px;
+  background: var(--sakurairo);
 }
 
+/* footer 要素内の div 要素に対する指定を行う */
 footer div {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-
-  background: var(--sakurairo);
+  display: grid;  /* grid 枠線 を使って配置するモードにします */
+  justify-content: center; /* 水平方向に中央揃えします */
+  align-content: center;   /* 垂直方向に中央揃えします */
 }
