@@ -1,0 +1,16 @@
+/*=====================================================================
+  キャッチフレーズ
+=====================================================================*/
+
+h1 {
+  grid-row: catch;
+  justify-self: center;
+  align-self: center;
+  color: var(--sakurairo);
+  font-size: 48px;
+}
+
+p {
+  grid-row: code;
+  text-align: center;
+}

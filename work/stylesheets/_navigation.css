@@ -1,0 +1,17 @@
+/*=====================================================================
+  ナビゲーションメニュー
+=====================================================================*/
+
+nav {
+  grid-row: header;
+  justify-self: center;
+  align-self: end;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 20px;
+}

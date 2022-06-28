@@ -1,0 +1,153 @@
+/*=====================================================================
+  スタイルシート 連結版
+=====================================================================*/
+
+/* 日本の伝統色 和の色十二食
+---------------------------------------------------------------------*/
+:root {
+  --kyohiiro:          #ff251e; /* 京緋色(きょうひいろ) */
+  --shinonomeiro:      #f19072; /* 東雲色(しののめいろ) */
+  --nanohanairo:       #ffec47; /* 菜の花色(なのはないろ) */
+  --sanaeiro:          #67a70c; /* 早苗色(さなえいろ) */
+  --amairo:            #2ca9e1; /* 天色(あまいろ) */
+  --utsushiiro:        #3d6eda; /* 移色(うつしいろ) */
+  --botaniro:          #e7609e; /* 牡丹色(ぼたんいろ) */
+  --ayameiro:          #674196; /* 菖蒲色(あやめいろ) */
+  --sakurairo:         #fef4f4; /* 桜色(さくらいろ) */
+  --momijiiro:         #a61017; /* 紅葉色(もみじいろ) */
+  --nibiiro:           #9ea1a3; /* 鈍色(にびいろ) */
+  --kurohairo:         #0d0d0d; /* 黒羽色(くろはいろ) */
+
+  --harukazeiro:       transparent; /* 春風色(はるかぜいろ) */
+}
+
+
+/* リセットCSS
+---------------------------------------------------------------------*/
+* {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* 全体の配置
+---------------------------------------------------------------------*/
+body {
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  grid-template-rows:
+              [header] 100px
+              [catch]  auto
+              [code]   auto
+              [haiku]  auto
+              [footer] 100px;
+  row-gap: 20px;
+}
+
+body > * {
+  grid-column: 2 / -2;
+}
+
+/* ヘッダー
+---------------------------------------------------------------------*/
+header  {
+  grid-row: header;
+  justify-self: center;
+  align-self: center;
+  font-size: 48px;clamp(48px, 12vw, 54px);
+}
+
+/* ナビゲーションメニュー
+---------------------------------------------------------------------*/
+nav {
+  grid-row: header;
+  justify-self: center;
+  align-self: end;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 20px;
+}
+
+/* ヒーローイメージ
+---------------------------------------------------------------------*/
+.hero {
+  grid-column: 1 / -1;
+  grid-row: catch / span 2;
+}
+
+.hero img {
+  height: 547px;
+  object-fit: cover;
+}
+
+/* キャッチフレーズ ＆ 装飾画像とソースコードへのリンクボタン
+---------------------------------------------------------------------*/
+h1 {
+  grid-row: catch;
+  justify-self: center;
+  align-self: center;
+  color: var(--sakurairo);
+  font-size: 48px;
+}
+
+p {
+  grid-row: code;
+  text-align: center;
+}
+
+/* ボタン
+---------------------------------------------------------------------*/
+.button {
+  display: inline-block;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.2rem;
+}
+
+.simple.button {
+  color: var(--botaniro);
+  border: double 3px var(--botaniro);
+  background: var(--sakurairo);
+}
+
+/* 俳句の紹介
+---------------------------------------------------------------------*/
+section {
+  grid-row: haiku;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 10px;
+}
+
+section h2 {
+  grid-column: 1 / -1;
+}
+
+/* フッター
+---------------------------------------------------------------------*/
+footer {
+  grid-row: footer;
+  grid-column: 1 / -1;
+  justify-self: center;
+  align-self: center;
+  font-size: 13px;
+}
+
+/* 文字の配置
+---------------------------------------------------------------------*/
+
+/* 写真の枠とその効果
+---------------------------------------------------------------------*/
+.frame {
+  border: solid 8px var(--sakurairo);
+}

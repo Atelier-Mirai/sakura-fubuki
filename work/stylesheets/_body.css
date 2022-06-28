@@ -1,0 +1,20 @@
+/*=====================================================================
+  body
+=====================================================================*/
+
+/* body 要素についての指定 */
+body {
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  grid-template-rows:
+              [header] 100px
+              [catch]  auto
+              [code]   auto
+              [haiku]  auto
+              [footer] 100px;
+  row-gap: 20px;
+}
+
+body > * {
+  grid-column: 2 / -2;
+}
